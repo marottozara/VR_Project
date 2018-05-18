@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 9e1cd3a767843554fbc4e6727cd8b0bc
-timeCreated: 1526307605
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -199,6 +197,7 @@ ModelImporter:
     4300058: Object01
     4300060: Object02
     4300062: Object03
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -218,6 +217,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

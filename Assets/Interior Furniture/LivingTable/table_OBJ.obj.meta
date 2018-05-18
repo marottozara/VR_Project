@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 3ca51898826c405418a2dd0db16e538d
-timeCreated: 1526393999
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -67,6 +65,7 @@ ModelImporter:
     4300014: DOSKA001
     4300016: Line004
     4300018: Line005
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -86,6 +85,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
