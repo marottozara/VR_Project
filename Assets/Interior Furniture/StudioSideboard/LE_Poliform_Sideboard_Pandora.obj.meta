@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 2a9ef62f6be8dc14aa97b7d91779dba8
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: LE_Bolia_Bowl_Grana_001
+    100002: LE_Bolia_Facet_Jar001
+    100004: LE_Bolia_Rombe_Tealight1_001
+    100006: LE_Bolia_Rombe_Tealight2_001
+    100008: LE_Bolia_Rombe_Tealight3_001
+    100010: LE_Bolia_Rombe_Tealight4_001
+    100012: LE_Branch_001
+    100014: LE_Orange_01
+    100016: LE_Orange_02
+    100018: LE_Orange_03
+    100020: LE_Orange_04
+    100022: LE_Orange_05
+    100024: LE_Orange_06
+    100026: LE_Orange_07
+    100028: LE_Orange_08
+    100030: //RootNode
+    100032: LE_Sideboard_Poliform_Pandora_4_001
+    100034: LE_V1_Pictureframe001
+    100036: LE_Vase_Habitat_Scratch_001
+    400000: LE_Bolia_Bowl_Grana_001
+    400002: LE_Bolia_Facet_Jar001
+    400004: LE_Bolia_Rombe_Tealight1_001
+    400006: LE_Bolia_Rombe_Tealight2_001
+    400008: LE_Bolia_Rombe_Tealight3_001
+    400010: LE_Bolia_Rombe_Tealight4_001
+    400012: LE_Branch_001
+    400014: LE_Orange_01
+    400016: LE_Orange_02
+    400018: LE_Orange_03
+    400020: LE_Orange_04
+    400022: LE_Orange_05
+    400024: LE_Orange_06
+    400026: LE_Orange_07
+    400028: LE_Orange_08
+    400030: //RootNode
+    400032: LE_Sideboard_Poliform_Pandora_4_001
+    400034: LE_V1_Pictureframe001
+    400036: LE_Vase_Habitat_Scratch_001
+    2100000: LE_Bolia_Bowl_Grana_001Mat
+    2100002: LE_Bolia_Facet_Jar001Mat
+    2100004: LE_Bolia_Rombe_Tealight1_001Mat
+    2100006: LE_Bolia_Rombe_Tealight2_001Mat
+    2100008: LE_Bolia_Rombe_Tealight3_001Mat
+    2100010: LE_Bolia_Rombe_Tealight4_001Mat
+    2100012: LE_Branch_001Mat
+    2100014: LE_Orange_01Mat
+    2100016: LE_Orange_02Mat
+    2100018: LE_Orange_03Mat
+    2100020: LE_Orange_04Mat
+    2100022: LE_Orange_05Mat
+    2100024: LE_Orange_06Mat
+    2100026: LE_Orange_07Mat
+    2100028: LE_Orange_08Mat
+    2100030: LE_Sideboard_Poliform_Pandora_4_001Mat
+    2100032: LE_V1_Pictureframe001Mat
+    2100034: LE_Vase_Habitat_Scratch_001Mat
+    2300000: LE_Bolia_Bowl_Grana_001
+    2300002: LE_Bolia_Facet_Jar001
+    2300004: LE_Bolia_Rombe_Tealight1_001
+    2300006: LE_Bolia_Rombe_Tealight2_001
+    2300008: LE_Bolia_Rombe_Tealight3_001
+    2300010: LE_Bolia_Rombe_Tealight4_001
+    2300012: LE_Branch_001
+    2300014: LE_Orange_01
+    2300016: LE_Orange_02
+    2300018: LE_Orange_03
+    2300020: LE_Orange_04
+    2300022: LE_Orange_05
+    2300024: LE_Orange_06
+    2300026: LE_Orange_07
+    2300028: LE_Orange_08
+    2300030: LE_Sideboard_Poliform_Pandora_4_001
+    2300032: LE_V1_Pictureframe001
+    2300034: LE_Vase_Habitat_Scratch_001
+    3300000: LE_Bolia_Bowl_Grana_001
+    3300002: LE_Bolia_Facet_Jar001
+    3300004: LE_Bolia_Rombe_Tealight1_001
+    3300006: LE_Bolia_Rombe_Tealight2_001
+    3300008: LE_Bolia_Rombe_Tealight3_001
+    3300010: LE_Bolia_Rombe_Tealight4_001
+    3300012: LE_Branch_001
+    3300014: LE_Orange_01
+    3300016: LE_Orange_02
+    3300018: LE_Orange_03
+    3300020: LE_Orange_04
+    3300022: LE_Orange_05
+    3300024: LE_Orange_06
+    3300026: LE_Orange_07
+    3300028: LE_Orange_08
+    3300030: LE_Sideboard_Poliform_Pandora_4_001
+    3300032: LE_V1_Pictureframe001
+    3300034: LE_Vase_Habitat_Scratch_001
+    4300000: LE_Bolia_Bowl_Grana_001
+    4300002: LE_Bolia_Facet_Jar001
+    4300004: LE_Bolia_Rombe_Tealight1_001
+    4300006: LE_Bolia_Rombe_Tealight2_001
+    4300008: LE_Bolia_Rombe_Tealight3_001
+    4300010: LE_Bolia_Rombe_Tealight4_001
+    4300012: LE_Branch_001
+    4300014: LE_Orange_01
+    4300016: LE_Orange_02
+    4300018: LE_Orange_03
+    4300020: LE_Orange_04
+    4300022: LE_Orange_05
+    4300024: LE_Orange_06
+    4300026: LE_Orange_07
+    4300028: LE_Orange_08
+    4300030: LE_Sideboard_Poliform_Pandora_4_001
+    4300032: LE_V1_Pictureframe001
+    4300034: LE_Vase_Habitat_Scratch_001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
