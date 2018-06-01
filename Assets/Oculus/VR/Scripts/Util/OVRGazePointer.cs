@@ -177,7 +177,7 @@ public class OVRGazePointer : MonoBehaviour {
     
     void Update () 
     {
-		if (rayTransform == null && Camera.main != null)
+        if (rayTransform == null && Camera.main != null)
 			rayTransform = Camera.main.transform;
 		
         // Move the gaze cursor to keep it in the middle of the view
