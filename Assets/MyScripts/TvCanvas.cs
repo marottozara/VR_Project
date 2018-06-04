@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class TvCanvas : MonoBehaviour {
 
 	public GameObject thisCanvas01;
+    public GameObject panel;
   
     // Use this for initialization
     void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
