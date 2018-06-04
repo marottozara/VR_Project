@@ -7,10 +7,7 @@ using UnityEngine.UI;
 public class TvCanvas : MonoBehaviour {
 
 	public GameObject thisCanvas01;
-    public Image BackgroundImage;
-    public Color NormalColor;
-    public Color HighlightColor;
-
+  
     // Use this for initialization
     void Start () {
 		
@@ -28,14 +25,4 @@ public class TvCanvas : MonoBehaviour {
     }
 
 
-    public void OnGazeEnter()
-    {
-        BackgroundImage.color = HighlightColor;
-    }
-
-
-    public void OnGazeExit()
-    {
-        BackgroundImage.color = NormalColor;
-    }
 }
