@@ -30,7 +30,7 @@ public class FillCursor : MonoBehaviour {
             
             tiempo = tiempo + Time.deltaTime;
 
-            radial.fillAmount = 1 - tiempo / 5;
+            radial.fillAmount = 1 - tiempo / 3;
             //print(radial.fillAmount);
 
         }
