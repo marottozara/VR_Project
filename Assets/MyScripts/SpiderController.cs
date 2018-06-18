@@ -24,14 +24,13 @@ public class SpiderController : MonoBehaviour {
 
         transform.Translate(0, 0, translation);
         transform.Rotate(0, rotation, 0);
-
         if(translation != 0)
         {
-            anim.SetBool("Iswalking", true);
+            anim.SetBool("IsWalking", true);
         }
         else
         {
-            anim.SetBool("Iswalking", false);
+            anim.SetBool("IsWalking", false);
         }
     }
 }
