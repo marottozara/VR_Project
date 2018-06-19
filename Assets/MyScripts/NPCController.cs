@@ -5,12 +5,18 @@ using System.Collections.Generic;
 public class NPCController : MonoBehaviour
 {
     private float timeToChangeDirection;
-    public Rigidbody spider;
+    static Animator anim;
+    float speed;
+    float rotationSpeed;
+    public float rotationY;
+    float translation;
+
 
     // Use this for initialization
     public void Start()
     {
         ChangeDirection();
+        speed = 0.01f;
     }
 
     // Update is called once per frame
@@ -23,19 +29,28 @@ public class NPCController : MonoBehaviour
             ChangeDirection();
         }
 
-        spider.velocity = transform.forward * 0.1f;
+       
     }
 
 
 
     private void ChangeDirection()
     {
-        float angle = Random.Range(0f, 360f);
-        Quaternion quat = Quaternion.AngleAxis(angle, Vector3.forward);
-        Vector3 newUp = quat * Vector3.up;
-        newUp.z = 0;
-        newUp.Normalize();
-        transform.up = newUp;
-        timeToChangeDirection = 1.5f;
+        float translation = /*Input.GetAxis("Vertical")*/transform.position.z * speed;
+        rotationY = Random.Range(-360f, 360f);
+        // float rotation = /*Input.GetAxis("Horizontal")*/transform.rotation.y * rotationSpeed;
+        translation *= Time.deltaTime;
+        rotationY *= Time.deltaTime;
+
+        transform.Translate(0, 0, translation);
+        transform.Rotate(0, rotationY, 0);
+        if (translation != 0)
+        {
+            anim.SetBool("IsWalking", true);
+        }
+        else
+        {
+            anim.SetBool("IsWalking", false);
+        }
     }
 }

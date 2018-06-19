@@ -11,6 +11,8 @@ TagManager:
   - Fader
   - dontmove
   - listlast
+  - thecaBorder
+  - thecaGlass
   layers:
   - Default
   - TransparentFX
