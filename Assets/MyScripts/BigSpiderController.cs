@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Threading;
 
 
-public class SpiderController : MonoBehaviour
+public class BigSpiderController : MonoBehaviour
 {
 
     static Animator anim;
@@ -46,9 +46,9 @@ public class SpiderController : MonoBehaviour
         translation *= Time.deltaTime;
         rotationY *= Time.deltaTime;
 
-        
 
-        transform.Translate(0, 0, translation);
+
+        transform.Translate(0, 0, -translation);
         transform.Rotate(0, rotationY, 0);
         if (translation != 0)
         {
@@ -63,9 +63,9 @@ public class SpiderController : MonoBehaviour
 
         if ((randomNumber > 98) && (coroutineIsRunning == false))
         {
-           // StartCoroutine("StopSpiderMovement");
+            // StartCoroutine("StopSpiderMovement");
         }
-       
+
 
     }
 
@@ -84,12 +84,12 @@ public class SpiderController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "thecaBorder" || collider.gameObject.tag == "thecaGlass")
+        if (collider.gameObject.tag == "thecaBorder" || collider.gameObject.tag == "thecaGlass")
         {
             float degrees;
-            degrees = 10f;//Random.Range(90f, 180f);
-           // degrees *= 0.1f; //Time.deltaTime;
-            transform.Rotate(0,  degrees, 0);
+            degrees = Random.Range(90f, 180f);
+            // degrees *= 0.1f; //Time.deltaTime;
+            transform.Rotate(0, degrees, 0);
             Debug.Log(collider.gameObject.name);
         }
     }
