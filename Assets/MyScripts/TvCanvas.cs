@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class TvCanvas : MonoBehaviour {
 
+    string panelName;
+
     bool interactionWithSpiders;
 
     public GameObject Books;
@@ -37,17 +39,21 @@ public class TvCanvas : MonoBehaviour {
     public GameObject PanelFotoRagni10;
     public GameObject PanelFotoRagni11;
     public GameObject PanelIntroInterazioneRagni;
+    public GameObject PanelInterazioneRagniTasti;
 
     public GameObject PanelSospendiFotoRagni;
+    public GameObject PanelSospendiInterazioneRagni;
 
     public ArrayList arrayPanels = new ArrayList();
 
     int indexArrayPanel;
-    
+    int stepSpiders;
 
 
     // Use this for initialization
     void Start () {
+
+        panelName = "";
 
         interactionWithSpiders = true;
 
@@ -81,6 +87,9 @@ public class TvCanvas : MonoBehaviour {
         arrayPanels.Add(PanelFotoRagni10);
         arrayPanels.Add(PanelFotoRagni11);
         arrayPanels.Add(PanelIntroInterazioneRagni);
+        arrayPanels.Add(PanelInterazioneRagniTasti);
+
+        stepSpiders = 1;
     }
 
     // Update is called once per frame
@@ -88,15 +97,54 @@ public class TvCanvas : MonoBehaviour {
 
         for (int i = 0; i < arrayPanels.Count; i++)
         {
+            
             if (((GameObject)arrayPanels[i]).activeSelf)
             {
-                if(((GameObject)arrayPanels[i]).name.Equals("PanelIntroInterazioneRagni"))
+                panelName = ((GameObject)arrayPanels[i]).name.ToString();
+
+                switch (panelName)
                 {
-                    Books.SetActive(false);
-                    Theca.SetActive(true);
+                    case "PanelIntroInterazioneRagni":
+                        Books.SetActive(false);
+                        Theca.SetActive(true);
+                        break;
+
+                    case "PanelInterazioneRagniTasti":
+                        switch (stepSpiders)
+                        {
+                            case 0:
+                                smallSpider.SetActive(false);
+                                mediumSpider.SetActive(false);
+                                bigSpider.SetActive(false);
+                                break;
+                            case 1:
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(false);
+                                bigSpider.SetActive(false);
+                                break;
+                            case 2:
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(true);
+                                bigSpider.SetActive(false);
+                                break;
+                            case 3:
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(true);
+                                bigSpider.SetActive(true);
+                                break;
+                        }
+                        break;
                 }
-                break;
+
             }
+
+            if (PanelSospendiInterazioneRagni.activeSelf)
+            {
+                smallSpider.SetActive(false);
+                mediumSpider.SetActive(false);
+                bigSpider.SetActive(false);
+            }
+
         }
 
     }
@@ -153,6 +201,48 @@ public class TvCanvas : MonoBehaviour {
     public void ShutDownButton()
     {
         PanelSospendiFotoRagni.SetActive(false);
+        PanelSospendiInterazioneRagni.SetActive(false);
+    }
+
+
+    public void NextSpiderButton()
+    {
+        stepSpiders++;
+    }
+
+
+    public void PrevSpiderButton()
+    {
+        if(stepSpiders > 0)
+        {
+            stepSpiders--;
+        }
+        else
+        {
+            stepSpiders = 0;
+        }
+    }
+
+
+    public void PauseInteractionSpidersButton()
+    {
+        for (int i = 0; i < arrayPanels.Count; i++)
+        {
+            if (((GameObject)arrayPanels[i]).activeSelf)
+            {
+                indexArrayPanel = i;
+                ((GameObject)arrayPanels[i]).SetActive(false);
+                PanelSospendiInterazioneRagni.SetActive(true);
+                break;
+            }
+        }
+    }
+
+
+    public void ResumeInteractionSpidersButton()
+    {
+        PanelSospendiInterazioneRagni.SetActive(false);
+        ((GameObject)arrayPanels[indexArrayPanel]).SetActive(true);
     }
 
 
