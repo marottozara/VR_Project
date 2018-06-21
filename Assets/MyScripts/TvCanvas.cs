@@ -6,7 +6,15 @@ using UnityEngine.UI;
 
 public class TvCanvas : MonoBehaviour {
 
-	public GameObject PanelIntroduzione;
+    bool interactionWithSpiders;
+
+    public GameObject Books;
+    public GameObject Theca;
+    public GameObject smallSpider;
+    public GameObject mediumSpider;
+    public GameObject bigSpider;
+
+    public GameObject PanelIntroduzione;
     public GameObject PanelInizioDomande;
     public GameObject PanelDomanda1;
     public GameObject PanelRisposta1;
@@ -28,6 +36,7 @@ public class TvCanvas : MonoBehaviour {
     public GameObject PanelFotoRagni09;
     public GameObject PanelFotoRagni10;
     public GameObject PanelFotoRagni11;
+    public GameObject PanelIntroInterazioneRagni;
 
     public GameObject PanelSospendiFotoRagni;
 
@@ -39,6 +48,15 @@ public class TvCanvas : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        interactionWithSpiders = true;
+
+        Books.SetActive(true);
+        Theca.SetActive(false);
+        smallSpider.SetActive(false);
+        mediumSpider.SetActive(false);
+        bigSpider.SetActive(false);
+
         indexArrayPanel = 0;
         arrayPanels.Add(PanelIntroduzione);
         arrayPanels.Add(PanelInizioDomande);
@@ -62,12 +80,26 @@ public class TvCanvas : MonoBehaviour {
         arrayPanels.Add(PanelFotoRagni09);
         arrayPanels.Add(PanelFotoRagni10);
         arrayPanels.Add(PanelFotoRagni11);
+        arrayPanels.Add(PanelIntroInterazioneRagni);
     }
 
     // Update is called once per frame
     void Update () {
-		
-	}
+
+        for (int i = 0; i < arrayPanels.Count; i++)
+        {
+            if (((GameObject)arrayPanels[i]).activeSelf)
+            {
+                if(((GameObject)arrayPanels[i]).name.Equals("PanelIntroInterazioneRagni"))
+                {
+                    Books.SetActive(false);
+                    Theca.SetActive(true);
+                }
+                break;
+            }
+        }
+
+    }
 
 
 	public void NextButton()

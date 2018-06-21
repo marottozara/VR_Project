@@ -61,8 +61,11 @@ public class BigSpiderController : MonoBehaviour
 
         randomNumber = Random.Range(0, 100);
 
-        if ((randomNumber > 98) && (coroutineIsRunning == false))
+        if ((randomNumber > 98))
         {
+            rotationY = 60f;//Random.Range(90f, 360f);
+            rotationY *= Time.deltaTime;
+            transform.Rotate(0, rotationY, 0);
             // StartCoroutine("StopSpiderMovement");
         }
 
@@ -87,7 +90,7 @@ public class BigSpiderController : MonoBehaviour
         if (collider.gameObject.tag == "thecaBorder" || collider.gameObject.tag == "thecaGlass")
         {
             float degrees;
-            degrees = Random.Range(90f, 180f);
+            degrees = 10f;//Random.Range(90f, 180f);
             // degrees *= 0.1f; //Time.deltaTime;
             transform.Rotate(0, degrees, 0);
             Debug.Log(collider.gameObject.name);
