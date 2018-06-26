@@ -132,6 +132,15 @@ public class TvCanvas : MonoBehaviour {
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(true);
                                 break;
+                            case 4:
+                                Theca.SetActive(false);
+                                smallSpider.transform.position = new Vector3(2.599f, 1f, 4.06f);
+                                smallSpider.transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(false);
+                                bigSpider.SetActive(false);
+                                stepSpiders = 5;
+                                break;
                         }
                         break;
                 }
