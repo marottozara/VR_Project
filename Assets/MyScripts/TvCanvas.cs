@@ -48,6 +48,7 @@ public class TvCanvas : MonoBehaviour {
 
     int indexArrayPanel;
     int stepSpiders;
+    bool changeSmallSpiderPosition;
 
 
     // Use this for initialization
@@ -56,6 +57,7 @@ public class TvCanvas : MonoBehaviour {
         panelName = "";
 
         interactionWithSpiders = true;
+        changeSmallSpiderPosition = true;
 
         Books.SetActive(true);
         Theca.SetActive(false);
@@ -113,33 +115,40 @@ public class TvCanvas : MonoBehaviour {
                         switch (stepSpiders)
                         {
                             case 0:
+                                Theca.SetActive(true);
                                 smallSpider.SetActive(false);
                                 mediumSpider.SetActive(false);
                                 bigSpider.SetActive(false);
                                 break;
                             case 1:
+                                Theca.SetActive(true);
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(false);
                                 bigSpider.SetActive(false);
                                 break;
                             case 2:
+                                Theca.SetActive(true);
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(false);
                                 break;
                             case 3:
+                                Theca.SetActive(true);
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(true);
                                 break;
                             case 4:
                                 Theca.SetActive(false);
-                                smallSpider.transform.position = new Vector3(2.599f, 1f, 4.06f);
-                                smallSpider.transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+                                if(changeSmallSpiderPosition == true)
+                                {
+                                    smallSpider.transform.position = new Vector3(2.599f, 1f, 4.06f);
+                                    smallSpider.transform.rotation = new Quaternion(0f, 0f, 0f, 1);
+                                    changeSmallSpiderPosition = false;
+                                }
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(false);
                                 bigSpider.SetActive(false);
-                                stepSpiders = 5;
                                 break;
                         }
                         break;
