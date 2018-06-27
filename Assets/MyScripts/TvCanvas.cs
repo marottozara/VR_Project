@@ -48,7 +48,8 @@ public class TvCanvas : MonoBehaviour {
 
     int indexArrayPanel;
     int stepSpiders;
-    bool changeSmallSpiderPosition;
+    bool changeSpiderPosition;
+    bool putSpiderInTheca;
 
 
     // Use this for initialization
@@ -57,7 +58,8 @@ public class TvCanvas : MonoBehaviour {
         panelName = "";
 
         interactionWithSpiders = true;
-        changeSmallSpiderPosition = true;
+        changeSpiderPosition = true;
+        putSpiderInTheca = false;
 
         Books.SetActive(true);
         Theca.SetActive(false);
@@ -134,20 +136,40 @@ public class TvCanvas : MonoBehaviour {
                                 break;
                             case 3:
                                 Theca.SetActive(true);
+                                if(putSpiderInTheca == true)
+                                {
+                                    smallSpider.transform.position = new Vector3(3f, 0.887f, 4.06f);
+                                    mediumSpider.transform.position = new Vector3(3.469f, 0.858f, 3.83f);
+                                    putSpiderInTheca = false;
+                                }
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(true);
                                 break;
                             case 4:
                                 Theca.SetActive(false);
-                                if(changeSmallSpiderPosition == true)
+                                if(changeSpiderPosition == true)
                                 {
-                                    smallSpider.transform.position = new Vector3(2.599f, 1f, 4.06f);
-                                    smallSpider.transform.rotation = new Quaternion(0f, 0f, 0f, 1);
-                                    changeSmallSpiderPosition = false;
+                                    smallSpider.transform.position = new Vector3(2.599f, 0.8427f, 4.06f);
+                                    smallSpider.transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                                    changeSpiderPosition = false;
                                 }
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(false);
+                                bigSpider.SetActive(false);
+                                break;
+                            case 5:
+                                Theca.SetActive(false);
+                                if (changeSpiderPosition == true)
+                                {
+                                    smallSpider.transform.position = new Vector3(2.599f, 0.8427f, 4.06f);
+                                    smallSpider.transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                                    mediumSpider.transform.position = new Vector3(2.975f, 0.842f, 3.757f);
+                                    mediumSpider.transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                                    changeSpiderPosition = false;
+                                }
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(true);
                                 bigSpider.SetActive(false);
                                 break;
                         }
@@ -234,6 +256,8 @@ public class TvCanvas : MonoBehaviour {
         if(stepSpiders > 0)
         {
             stepSpiders--;
+            if (stepSpiders < 4)
+                putSpiderInTheca = true;
         }
         else
         {

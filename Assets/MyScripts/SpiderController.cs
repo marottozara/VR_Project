@@ -61,14 +61,21 @@ public class SpiderController : MonoBehaviour
 
         randomNumber = Random.Range(0, 100);
 
-        /*if ((randomNumber > 98))
+        if ((randomNumber > 98))
         {
             rotationY = 60f;//Random.Range(90f, 360f);
             rotationY *= Time.deltaTime;
             transform.Rotate(0, rotationY, 0);
 
             // StartCoroutine("StopSpiderMovement");
+        }
+
+        /*if(transform.rotation.x != 0)
+        {
+            transform.rotation = new Quaternion(0f, 90f, transform.rotation.z, transform.rotation.w);
         }*/
+
+        transform.rotation = new Quaternion(0f, transform.rotation.y, transform.rotation.z, transform.rotation.w);
 
 
     }
@@ -86,16 +93,16 @@ public class SpiderController : MonoBehaviour
     }
 
 
-    /*private void OnTriggerEnter(Collider collider)
+   private void OnTriggerEnter(Collider collider)
     {
         if(collider.gameObject.tag == "thecaBorder" || collider.gameObject.tag == "thecaGlass")
         {
             float degrees;
-            degrees = 180f;//Random.Range(90f, 180f);
+            degrees = 10f;//Random.Range(90f, 180f);
             //degrees *= Time.deltaTime;
             transform.Rotate(0,  degrees, 0);
             Debug.Log(collider.gameObject.name);
         }
-    }*/
+    }
     
 }
