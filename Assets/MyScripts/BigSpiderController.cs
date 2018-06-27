@@ -69,6 +69,8 @@ public class BigSpiderController : MonoBehaviour
             // StartCoroutine("StopSpiderMovement");
         }
 
+        transform.rotation = new Quaternion(0f, transform.rotation.y, transform.rotation.z, transform.rotation.w);
+
 
     }
 

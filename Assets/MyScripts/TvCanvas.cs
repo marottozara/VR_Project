@@ -140,6 +140,7 @@ public class TvCanvas : MonoBehaviour {
                                 {
                                     smallSpider.transform.position = new Vector3(3f, 0.887f, 4.06f);
                                     mediumSpider.transform.position = new Vector3(3.469f, 0.858f, 3.83f);
+                                    bigSpider.transform.position = new Vector3(3.213f, 0.859f, 3.978f);
                                     putSpiderInTheca = false;
                                 }
                                 smallSpider.SetActive(true);
@@ -171,6 +172,22 @@ public class TvCanvas : MonoBehaviour {
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(false);
+                                break;
+                            case 6:
+                                Theca.SetActive(false);
+                                if (changeSpiderPosition == true)
+                                {
+                                    smallSpider.transform.position = new Vector3(2.599f, 0.8427f, 4.06f);
+                                    smallSpider.transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                                    mediumSpider.transform.position = new Vector3(2.975f, 0.842f, 3.757f);
+                                    mediumSpider.transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                                    bigSpider.transform.position = new Vector3(2.606f, 0.845f, 3.83f);
+                                    bigSpider.transform.rotation = new Quaternion(0f, 180f, 0f, 1);
+                                    changeSpiderPosition = false;
+                                }
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(true);
+                                bigSpider.SetActive(true);
                                 break;
                         }
                         break;
