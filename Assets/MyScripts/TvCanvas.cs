@@ -16,6 +16,8 @@ public class TvCanvas : MonoBehaviour {
     public GameObject mediumSpider;
     public GameObject bigSpider;
 
+    public GameObject mediumSpiderIdle;
+
     public GameObject PanelIntroduzione;
     public GameObject PanelInizioDomande;
     public GameObject PanelDomanda1;
@@ -66,6 +68,7 @@ public class TvCanvas : MonoBehaviour {
         smallSpider.SetActive(false);
         mediumSpider.SetActive(false);
         bigSpider.SetActive(false);
+        mediumSpiderIdle.SetActive(false);
 
         indexArrayPanel = 0;
         arrayPanels.Add(PanelIntroduzione);
@@ -121,18 +124,21 @@ public class TvCanvas : MonoBehaviour {
                                 smallSpider.SetActive(false);
                                 mediumSpider.SetActive(false);
                                 bigSpider.SetActive(false);
+                                mediumSpiderIdle.SetActive(false);
                                 break;
                             case 1:
                                 Theca.SetActive(true);
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(false);
                                 bigSpider.SetActive(false);
+                                mediumSpiderIdle.SetActive(false);
                                 break;
                             case 2:
                                 Theca.SetActive(true);
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(false);
+                                mediumSpiderIdle.SetActive(false);
                                 break;
                             case 3:
                                 Theca.SetActive(true);
@@ -146,6 +152,7 @@ public class TvCanvas : MonoBehaviour {
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(true);
+                                mediumSpiderIdle.SetActive(false);
                                 break;
                             case 4:
                                 Theca.SetActive(false);
@@ -158,6 +165,7 @@ public class TvCanvas : MonoBehaviour {
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(false);
                                 bigSpider.SetActive(false);
+                                mediumSpiderIdle.SetActive(false);
                                 break;
                             case 5:
                                 Theca.SetActive(false);
@@ -172,6 +180,7 @@ public class TvCanvas : MonoBehaviour {
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(false);
+                                mediumSpiderIdle.SetActive(false);
                                 break;
                             case 6:
                                 Theca.SetActive(false);
@@ -188,6 +197,14 @@ public class TvCanvas : MonoBehaviour {
                                 smallSpider.SetActive(true);
                                 mediumSpider.SetActive(true);
                                 bigSpider.SetActive(true);
+                                mediumSpiderIdle.SetActive(false);
+                                break;
+                            case 7:
+                                Theca.SetActive(false);
+                                smallSpider.SetActive(true);
+                                mediumSpider.SetActive(true);
+                                bigSpider.SetActive(true);
+                                mediumSpiderIdle.SetActive(true);
                                 break;
                         }
                         break;
@@ -292,6 +309,7 @@ public class TvCanvas : MonoBehaviour {
                 indexArrayPanel = i;
                 ((GameObject)arrayPanels[i]).SetActive(false);
                 PanelSospendiInterazioneRagni.SetActive(true);
+                mediumSpiderIdle.SetActive(false);
                 break;
             }
         }

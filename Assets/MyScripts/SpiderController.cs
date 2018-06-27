@@ -70,11 +70,6 @@ public class SpiderController : MonoBehaviour
             // StartCoroutine("StopSpiderMovement");
         }
 
-        /*if(transform.rotation.x != 0)
-        {
-            transform.rotation = new Quaternion(0f, 90f, transform.rotation.z, transform.rotation.w);
-        }*/
-
         transform.rotation = new Quaternion(0f, transform.rotation.y, transform.rotation.z, transform.rotation.w);
 
 
