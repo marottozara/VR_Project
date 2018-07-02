@@ -45,6 +45,7 @@ public class TvCanvas : MonoBehaviour {
 
     public GameObject PanelSospendiFotoRagni;
     public GameObject PanelSospendiInterazioneRagni;
+    public GameObject PanelCompletamentoPercorsoRagni;
 
     public ArrayList arrayPanels = new ArrayList();
 
@@ -219,6 +220,16 @@ public class TvCanvas : MonoBehaviour {
                 bigSpider.SetActive(false);
             }
 
+        }//fine for
+
+        if(stepSpiders == 8)
+        {
+            PanelInterazioneRagniTasti.SetActive(false);
+            PanelCompletamentoPercorsoRagni.SetActive(true);
+            smallSpider.SetActive(false);
+            mediumSpider.SetActive(false);
+            bigSpider.SetActive(false);
+            mediumSpiderIdle.SetActive(false);
         }
 
     }
@@ -274,8 +285,9 @@ public class TvCanvas : MonoBehaviour {
 
     public void ShutDownButton()
     {
-        PanelSospendiFotoRagni.SetActive(false);
-        PanelSospendiInterazioneRagni.SetActive(false);
+        //PanelSospendiFotoRagni.SetActive(false);
+        //PanelSospendiInterazioneRagni.SetActive(false);
+        SceneManager.LoadScene("Home");
     }
 
 
@@ -320,6 +332,11 @@ public class TvCanvas : MonoBehaviour {
     {
         PanelSospendiInterazioneRagni.SetActive(false);
         ((GameObject)arrayPanels[indexArrayPanel]).SetActive(true);
+    }
+
+    public void HomeButton()
+    {
+        SceneManager.LoadScene("Home");
     }
 
 
