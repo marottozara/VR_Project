@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class ButtonTimer : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
-    public int timeremain = 2; // tiempo restante
+    int timeremain = 1; // tiempo restante
     Button _button;
 
 
@@ -45,7 +45,7 @@ public class ButtonTimer : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         NotificationCenter.DefaultCenter().PostNotification(this, "EnNada");
         print("Cancela");
         CancelInvoke("countDown");
-        timeremain = 2;
+        timeremain = 1;
     }
 
     void countDown()
@@ -61,7 +61,7 @@ public class ButtonTimer : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             _button.onClick.Invoke();
             //reset time
             CancelInvoke("countDown");
-            timeremain = 2;
+            timeremain = 1;
             //print("reset time");
             
         }
