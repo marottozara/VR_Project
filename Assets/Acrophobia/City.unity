@@ -430,8 +430,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 424220948}
-  m_LocalRotation: {x: -0.34847128, y: 0.09617941, z: 0.03597355, w: 0.93167764}
-  m_LocalPosition: {x: -313.57706, y: 94.14815, z: 97.92615}
+  m_LocalRotation: {x: -0.1318961, y: 0.7625929, z: 0.16447039, w: 0.6115595}
+  m_LocalPosition: {x: -403.83093, y: 121.95448, z: 175.6018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -495,8 +495,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659995157}
-  m_LocalRotation: {x: -0.34847128, y: 0.09617941, z: 0.03597355, w: 0.93167764}
-  m_LocalPosition: {x: -314.9914, y: 94.14815, z: 91.148926}
+  m_LocalRotation: {x: -0.13378562, y: 0.8021078, z: 0.19579522, w: 0.5480773}
+  m_LocalPosition: {x: -403.83105, y: 121.95445, z: 175.60193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -715,8 +715,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 781325879}
-  m_LocalRotation: {x: -0.34847128, y: 0.09617941, z: 0.03597355, w: 0.93167764}
-  m_LocalPosition: {x: -313.57706, y: 94.14815, z: 97.92615}
+  m_LocalRotation: {x: -0.1318961, y: 0.7625929, z: 0.16447039, w: 0.6115595}
+  m_LocalPosition: {x: -403.83093, y: 121.95448, z: 175.6018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -843,7 +843,7 @@ Terrain:
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 0
   m_TreeMaximumFullLODCount: 1
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 134
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
