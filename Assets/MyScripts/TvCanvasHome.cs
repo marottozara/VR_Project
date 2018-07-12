@@ -41,6 +41,12 @@ public class TvCanvasHome : MonoBehaviour
         PanelAcrofobia01.SetActive(true);
     }
 
+    public void PowerOffButton()
+    {
+        Debug.Log("Chiudo l'applicazione...");
+        Application.Quit();
+    }
+
 
     public void AcrofobiaNextButton()
     {
