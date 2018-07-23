@@ -85,6 +85,6 @@ public class TvCanvasHome : MonoBehaviour
 
     public void AcrofobiaStartButton()
     {
-        SceneManager.LoadScene("Mountain");
+        SceneManager.LoadScene("CityHome");
     }
 }
