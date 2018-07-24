@@ -897,6 +897,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2132126856}
+        m_MethodName: NextButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &409199016
@@ -5512,6 +5523,7 @@ GameObject:
   - component: {fileID: 2132126854}
   - component: {fileID: 2132126853}
   - component: {fileID: 2132126852}
+  - component: {fileID: 2132126856}
   m_Layer: 0
   m_Name: TvCanvas
   m_TagString: Untagged
@@ -5598,3 +5610,14 @@ RectTransform:
   m_AnchoredPosition: {x: -98.86264, y: 257.94818}
   m_SizeDelta: {x: 1.5788, y: 0.8663}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2132126856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132126851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a623594cec0f8124ba116fbe82b0fdaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
