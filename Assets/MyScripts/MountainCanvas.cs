@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class MountainCanvas : MonoBehaviour {
 
+    string currentScene;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -24,11 +26,13 @@ public class MountainCanvas : MonoBehaviour {
 
     public void BackButton()
     {
-
+        SceneManager.LoadScene("City");
     }
 
     public void ExitButton()
     {
-        SceneManager.LoadScene("Home");
+        currentScene = SceneManager.GetActiveScene().name.ToString(); //viene salvato il nome della scena da caricare
+        PlayerPrefs.SetString("loadScene", currentScene);
+        SceneManager.LoadScene("AcrofobiaPause");
     }
 }

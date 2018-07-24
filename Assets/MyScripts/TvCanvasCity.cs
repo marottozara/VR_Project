@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TvCanvasCity : MonoBehaviour {
 
+    string currentScene;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -24,7 +26,9 @@ public class TvCanvasCity : MonoBehaviour {
 
     public void ExitButton()
     {
-
+        currentScene = SceneManager.GetActiveScene().name.ToString(); //viene salvato il nome della scena da caricare
+        PlayerPrefs.SetString("loadScene", currentScene);
+        SceneManager.LoadScene("AcrofobiaPause");
     }
 
 

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Acrophobia/Mountain/Mountain.unity
     guid: ed5aab6db39ba0c45aa7af16e27361b9
+  - enabled: 1
+    path: Assets/Acrophobia/Pause/AcrofobiaPause.unity
+    guid: 02bde4364bb958c40b07d9f3c7f75795
   m_configObjects: {}
