@@ -11,12 +11,18 @@ public class TvCanvasHome : MonoBehaviour
     public GameObject PanelAcrofobia01;
     public GameObject PanelAcrofobia02;
 
+    public GameObject PanelAcrophobiaIsCompleted;
+
+    string AcrophobiaIsCompleted;
+
     public ArrayList arrayAcrofobiaPanels = new ArrayList();
 
     // Use this for initialization
     void Start()
     {
-
+        AcrophobiaIsCompleted = PlayerPrefs.GetString("AcrophobiaIsCompleted");
+        PanelAcrophobiaIsCompleted.SetActive(false);
+        PanelHome.SetActive(false);
         arrayAcrofobiaPanels.Add(PanelAcrofobia01);
         arrayAcrofobiaPanels.Add(PanelAcrofobia02);
 
@@ -25,7 +31,16 @@ public class TvCanvasHome : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(AcrophobiaIsCompleted.Equals("true"))
+        {
+            PanelHome.SetActive(false);
+            PanelAcrophobiaIsCompleted.SetActive(true);
+        }
+        else
+        {
+            PanelAcrophobiaIsCompleted.SetActive(false);
+            PanelHome.SetActive(true);
+        }
     }
 
 
@@ -86,5 +101,12 @@ public class TvCanvasHome : MonoBehaviour
     public void AcrofobiaStartButton()
     {
         SceneManager.LoadScene("CityHome");
+    }
+
+
+    public void AcrophobiaCompletedNextButton()
+    {
+        AcrophobiaIsCompleted = "false";
+        PlayerPrefs.SetString("AcrophobiaIsCompleted", AcrophobiaIsCompleted);
     }
 }

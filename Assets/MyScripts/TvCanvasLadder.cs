@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class MountainCanvas : MonoBehaviour {
+public class TvCanvasLadder : MonoBehaviour {
 
     string currentScene;
 
@@ -21,13 +20,16 @@ public class MountainCanvas : MonoBehaviour {
 
     public void NextButton()
     {
-        SceneManager.LoadScene("LadderScene2");
+        PlayerPrefs.SetString("AcrophobiaIsCompleted", "true");
+        SceneManager.LoadScene("Home");
     }
+
 
     public void BackButton()
     {
-        SceneManager.LoadScene("City");
+        SceneManager.LoadScene("Mountain");
     }
+
 
     public void ExitButton()
     {
